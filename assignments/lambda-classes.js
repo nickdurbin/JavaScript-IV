@@ -22,7 +22,7 @@ class Instructor extends Person {
     return `Today we are learning about ${subject}.`
   }
   grade(student, subject) {
-    return `${student.name} receives a perfect score on ${subject}.`
+    return `${student} receives a perfect score on ${subject}.`
   }
 }
 
@@ -32,15 +32,21 @@ class Student extends Person {
     this.previousBackground = stuAtts.previousBackground;
     this.className = stuAtts.className;
     this.favSubjects = stuAtts.favSubjects;
+    this.grade = stuAtts.grade;
   }
   listSubjects() {
-    return this.favSubjects.push();
+    this.favSubjects.forEach(element => {
+      return element;
+    });
   }
   PRAssignment(subject) {
-    return `${student.name} has submitted a PR for ${subject}.`
+    return `${this.name} has submitted a PR for ${subject}.`
   }
   sprintChallenge(subject) {
-    return `${student.name} has begun sprint challenge on ${subject}.`
+    return `${this.name} has begun sprint challenge on ${subject}.`
+  }
+  graduatePF(grade) {
+    `grade.includes() ? ${this.grade} > 70 === true : false`; 
   }
 }
 
@@ -54,7 +60,7 @@ class TeamLead extends Instructor {
     return `${name} announces to ${channel}. @channel standy times!`
   }
   debugsCode(student, subject) {
-    return `${name} debugs ${student.name}'s code on ${subject}.`
+    return `${name} debugs ${student}'s code on ${subject}.`
   }
 }
 
