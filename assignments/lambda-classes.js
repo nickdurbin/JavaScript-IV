@@ -68,13 +68,16 @@ const nick = new Student ({
   previousBackground: 'Test and Repair Manager',
   className: 'WebPT 8',
   favSubjects: 'Javascript',
-  grade: 94
+  grade: 94,
+  name: 'Nick',
+  location: 'Ohio'
 })
 
 const keiran = new Instructor ({
   specialty: 'Front-End',
   favLanguage: 'React',
-  catchPhrase: 'I am Wild.'
+  catchPhrase: 'I am Wild.',
+  name: 'Keiran'
 })
 
 console.log(nick.className);
