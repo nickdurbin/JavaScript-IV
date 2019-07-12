@@ -45,8 +45,8 @@ class Student extends Person {
   sprintChallenge(subject) {
     return `${this.name} has begun sprint challenge on ${subject}.`
   }
-  graduatePF(grade) {
-    `grade.includes() ? ${this.grade} > 70 === true : false`; 
+  graduatePF() {
+    return (this.grade > 70 ? 'You Graduate!' : 'Hit the Books'); 
   }
 }
 
@@ -64,3 +64,26 @@ class TeamLead extends Instructor {
   }
 }
 
+const nick = new Student ({
+  previousBackground: 'Test and Repair Manager',
+  className: 'WebPT 8',
+  favSubjects: 'Javascript',
+  grade: 94
+})
+
+const keiran = new Instructor ({
+  specialty: 'Front-End',
+  favLanguage: 'React',
+  catchPhrase: 'I am Wild.'
+})
+
+console.log(nick.className);
+console.log(nick.previousBackground);
+console.log(nick.favSubjects);
+console.log(nick.grade);
+console.log(nick.PRAssignment('Javascript'));
+console.log(nick.sprintChallenge('React'));
+console.log(nick.graduatePF());
+console.log(nick.speak());
+console.log(keiran.demo('React'));
+console.log(keiran.grade('Nick', 'HTML'));
